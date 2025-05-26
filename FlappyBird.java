@@ -35,7 +35,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     //pipe class
     int pipeX = boardWidth;
     int pipeY = 0;
-    int pipeWidth = 64;  //scaled by 1/6
+    int pipeWidth = 64;
     int pipeHeight = 512;
     
     class Pipe {
@@ -53,8 +53,8 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
 
     //game logic
     Bird bird;
-    int velocityX = -4; //move pipes to the left speed (simulates bird moving right)
-    int velocityY = 0; //move bird up/down speed.
+    int velocityX = -4;
+    int velocityY = 0;
     int gravity = 1;
 
     ArrayList<Pipe> pipes;
@@ -92,7 +92,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
         placePipeTimer.start();
         
 		//game timer
-		gameLoop = new Timer(1000/60, this); //how long it takes to start timer, milliseconds gone between frames 
+		gameLoop = new Timer(1000/60, this);
         gameLoop.start();
 	}
     
